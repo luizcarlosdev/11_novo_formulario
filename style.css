@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    width: 450px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 45px 5px;
+}
+
+form #form-header{
+    width: 100%;
+}
+
+form #form-header h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form #inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+form #inputs .input{
+    width: 80%;
+    height: 40px;
+    /* border: 1px solid #999; */
+    box-shadow: 0px 0px 1.5px 2px #00000024;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+form #inputs .input #password-button {
+    cursor: pointer;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+form #inputs .input input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+
+form #inputs .input input::placeholder{
+    color: #999;
+    font-size: 1rem;
+}
+
+form #inputs .input input,button{
+    padding: 10px 12px;
+}
+
+form #inputs .input button{
+    background-color: transparent;
+    border: none;
+    min-width: 60px;
+    min-height: 100%;
+}
+
+form #inputs .input i{
+    color: #999;
+    font-size: 1.1rem;
+}
+
+form #options{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+form #options #forgot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+form #options #forgot a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(23, 96, 223);
+    text-align: center;
+}
+
+form #options #button{
+    width: 100%;
+}
+
+form #options #button input[type=submit]{
+    width: 100%;
+    background-color: rgb(23, 133, 223);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form #options #create{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+}
+
+form #options #create a{
+    color: rgb(23, 123, 223);
+    text-decoration: none;
+}
+
+form #anothers-options{
+    width: 100%;
+    padding: 10px;
+}
+
+form #anothers-options #or{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form #anothers-options span{
+    position: relative;
+    display: inline;
+    margin: 0px 5px;
+}
+
+form #anothers-options span::after{
+    content: " ";
+    width: 150px;
+    height: 1px;
+    background-color: #99999986;
+    position: absolute;
+    display: inline;
+    top: 50%;
+    margin-left: 5px;
+}
+
+form #anothers-options span::before{
+    content: " ";
+    width: 150px;
+    height: 1px;
+    background-color: #99999986;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 10%;
+    right: 100px;
+    transform: rotate(-180deg) translate(156px);
+    bottom: 0px;
+    margin-right: 5px !important;
+}
+
+form #social{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+form #social button{
+    background-color: rgb(9, 43, 67);
+    height: 43px;
+    width: 43px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+form #social button i{
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+@media (max-width:768px) {
+    form{
+        width: 350px;
+    }
+}
