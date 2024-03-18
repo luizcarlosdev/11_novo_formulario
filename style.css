@@ -1,21 +1,34 @@
 @charset "UTF-8";
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
     width: 100%;
     display: grid;
     place-items: center;
     background-color: blue;
+    background-image: url(./back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-position: center center;
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.5),
+        /* Sombra externa */
+        -8px -8px 15px rgba(255, 255, 255, 0.5);
+    /* Sombra interna */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,16 +41,16 @@ form{
     padding: 45px 5px;
 }
 
-form #form-header{
+form #form-header {
     width: 100%;
 }
 
-form #form-header h1{
+form #form-header h1 {
     text-align: center;
     margin-bottom: 25px;
 }
 
-form #inputs{
+form #inputs {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -46,7 +59,7 @@ form #inputs{
     row-gap: 15px;
 }
 
-form #inputs .input{
+form #inputs .input {
     width: 80%;
     height: 40px;
     /* border: 1px solid #999; */
@@ -63,7 +76,7 @@ form #inputs .input #password-button {
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-form #inputs .input input{
+form #inputs .input input {
     width: 100%;
     height: 100%;
     border: none;
@@ -71,28 +84,29 @@ form #inputs .input input{
 }
 
 
-form #inputs .input input::placeholder{
+form #inputs .input input::placeholder {
     color: #999;
     font-size: 1rem;
 }
 
-form #inputs .input input,button{
+form #inputs .input input,
+button {
     padding: 10px 12px;
 }
 
-form #inputs .input button{
+form #inputs .input button {
     background-color: transparent;
     border: none;
     min-width: 60px;
     min-height: 100%;
 }
 
-form #inputs .input i{
+form #inputs .input i {
     color: #999;
     font-size: 1.1rem;
 }
 
-form #options{
+form #options {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -101,14 +115,14 @@ form #options{
     row-gap: 10px;
 }
 
-form #options #forgot{
+form #options #forgot {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
 }
 
-form #options #forgot a{
+form #options #forgot a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 700;
@@ -116,11 +130,12 @@ form #options #forgot a{
     text-align: center;
 }
 
-form #options #button{
+form #options #button {
     width: 100%;
 }
 
-form #options #button input[type=submit]{
+form #options #button input[type=submit],
+input[type=button] {
     width: 100%;
     background-color: rgb(23, 133, 223);
     border: none;
@@ -132,7 +147,7 @@ form #options #button input[type=submit]{
     cursor: pointer;
 }
 
-form #options #create{
+form #options #create {
     width: 100%;
     display: flex;
     align-items: center;
@@ -140,30 +155,30 @@ form #options #create{
     color: #444;
 }
 
-form #options #create a{
+form #options #create a {
     color: rgb(23, 123, 223);
     text-decoration: none;
 }
 
-form #anothers-options{
+form #anothers-options {
     width: 100%;
     padding: 10px;
 }
 
-form #anothers-options #or{
+form #anothers-options #or {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form #anothers-options span{
+form #anothers-options span {
     position: relative;
     display: inline;
     margin: 0px 5px;
 }
 
-form #anothers-options span::after{
+form #anothers-options span::after {
     content: " ";
     width: 150px;
     height: 1px;
@@ -174,7 +189,7 @@ form #anothers-options span::after{
     margin-left: 5px;
 }
 
-form #anothers-options span::before{
+form #anothers-options span::before {
     content: " ";
     width: 150px;
     height: 1px;
@@ -189,7 +204,7 @@ form #anothers-options span::before{
     margin-right: 5px !important;
 }
 
-form #social{
+form #social {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -198,7 +213,7 @@ form #social{
     column-gap: 12px;
 }
 
-form #social button{
+form #social button {
     background-color: rgb(9, 43, 67);
     height: 43px;
     width: 43px;
@@ -210,13 +225,13 @@ form #social button{
     cursor: pointer;
 }
 
-form #social button i{
+form #social button i {
     font-size: 1.1rem;
     color: #ffffff;
 }
 
 @media (max-width:768px) {
-    form{
+    form {
         width: 350px;
     }
 }
