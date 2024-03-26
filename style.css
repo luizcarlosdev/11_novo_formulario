@@ -12,12 +12,6 @@ body {
     display: grid;
     place-items: center;
     background-color: blue;
-    background-image: url(./back.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-clip: border-box;
-    background-position: center center;
     border-radius: 10px;
     /* Bordas arredondadas */
     box-shadow:
